@@ -78,9 +78,10 @@ code b { color: #b8a0ff; } code i { color: #d8a7f9; font-style: normal; }
 .section-heading > p { color: var(--muted); font-size: 13px; }
 .section-heading a { color: var(--purple-dark); font-weight: 600; }
 .project {
-  display: grid; grid-template-columns: 70px 1fr 360px; gap: 35px; align-items: center;
+  display: grid; grid-template-columns: 70px 1fr; gap: 35px; align-items: center;
   border-top: 1px solid var(--line); padding: 45px 0;
 }
+.project.featured { grid-template-columns: 70px 1fr 360px; }
 .project:last-child { border-bottom: 1px solid var(--line); }
 .project-number { color: var(--purple-dark); font: 600 13px "Space Grotesk"; }
 .project-type { color: var(--muted); margin: 0 0 13px; }
@@ -115,7 +116,8 @@ footer { max-width: 1180px; margin: auto; padding: 25px 30px; display: flex; jus
   .hero-card { min-height: 350px; }
   .orbit-one { width: 350px; height: 350px; }
   .project { grid-template-columns: 35px 1fr; }
-  .project-visual { grid-column: 2; }
+  .project.featured { grid-template-columns: 35px 1fr; }
+  .project.featured .project-visual { grid-column: 2; }
   .section-heading { display: block; }
   .section-heading > p { margin-top: 20px; }
   .skill-grid { grid-template-columns: 1fr; }
